@@ -1,0 +1,15 @@
+<!-- registrer.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <title>Create user</title>
+</head>
+<body>
+<h2>Create a new user</h2>
+<form th:action="@{/createuser}" th:object="${user}" method="post">
+  <p>name: <input type="name" th:field="*{name}" /></p>
+  <p>email: <input type="email" th:field="*{email}" /></p>
+  <p><button type="submit">Registrer</button></p>
+</form>
+</body>
+</html>
